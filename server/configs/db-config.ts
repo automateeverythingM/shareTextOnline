@@ -1,6 +1,20 @@
 import { TypeOrmModuleOptions } from '@nestjs/typeorm';
 
-export const connectionOptions: TypeOrmModuleOptions = {
+export const sqliteConnectionOptions: TypeOrmModuleOptions = {
+  type: 'sqlite',
+  database: 'db/sharetextonline',
+
+  entities: ['dist/**/*.entity{.ts,.js}'],
+  autoLoadEntities: true,
+  synchronize: true,
+  logging: true,
+  migrations: ['dist/**/*.migrations.js'],
+  cli: {
+    migrationsDir: 'src/migrations',
+  },
+};
+
+export const mysqlConnectionOptions: TypeOrmModuleOptions = {
   type: 'mysql',
   database: 'sharetextonline',
   username: 'root',

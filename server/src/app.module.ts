@@ -3,13 +3,13 @@ import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { AppController } from './app.controller';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { connectionOptions } from '../configs/db-config';
+import { sqliteConnectionOptions } from '../configs/db-config';
 
 @Module({
   imports: [
     TextModule,
     ConfigModule.forRoot({ isGlobal: true }),
-    TypeOrmModule.forRoot(connectionOptions),
+    TypeOrmModule.forRoot(sqliteConnectionOptions),
     TextModule,
   ],
   controllers: [AppController],

@@ -56,3 +56,4 @@ connect.lock
 libpeerconnection.log
 testem.log
 /typings
+server/db
