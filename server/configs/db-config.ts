@@ -23,7 +23,7 @@ export const mysqlConnectionOptions: TypeOrmModuleOptions = {
   port: 3306,
   entities: ['dist/**/*.entity{.ts,.js}'],
   autoLoadEntities: true,
-  synchronize: true,
+  synchronize: false,
   logging: true,
   migrations: ['dist/**/*.migrations.js'],
   cli: {

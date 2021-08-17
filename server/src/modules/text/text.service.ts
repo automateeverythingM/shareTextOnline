@@ -21,4 +21,8 @@ export class TextService {
     const textToShare = this.textRepository.create({ ...text });
     return this.textRepository.save(textToShare);
   }
+
+  getAll() {
+    return this.textRepository.find();
+  }
 }

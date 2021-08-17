@@ -3,7 +3,7 @@
   "database": "db/sharetextonline",
   "entities": ["dist/**/*.entity{.ts,.js}"],
   "autoLoadEntities": true,
-  "synchronize": true,
+  "synchronize": false,
   "logging": true,
   "migrations": ["dist/**/*.migrations.js"],
   "cli": {

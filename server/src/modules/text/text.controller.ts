@@ -13,6 +13,11 @@ import { TextService } from './text.service';
 export class TextController {
   constructor(private textService: TextService) {}
 
+  @Get()
+  getAll() {
+    return this.textService.getAll();
+  }
+
   @Get(':id')
   getText(@Param('id', new ParseUUIDPipe()) id) {
     return this.textService.getOneById(id);

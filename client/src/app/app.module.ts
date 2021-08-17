@@ -4,19 +4,25 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LayoutComponent } from './layout/layout.component';
-import { EditorComponent } from './editor/editor.component';
+import { EditorComponent } from './components/editor/editor.component';
+import { HttpClientModule } from '@angular/common/http';
+import { DisplayTextComponent } from './pages/display-text/display-text.component';
+import { HomePageComponent } from './pages/home-page/home-page.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { BypassStyleSanitizePipe } from './pipes/bypass-style-sanitize.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     LayoutComponent,
-    EditorComponent
+    EditorComponent,
+    DisplayTextComponent,
+    HomePageComponent,
+    NotFoundComponent,
+    BypassStyleSanitizePipe,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

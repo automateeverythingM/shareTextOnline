@@ -10,7 +10,6 @@ import { sqliteConnectionOptions } from '../configs/db-config';
     TextModule,
     ConfigModule.forRoot({ isGlobal: true }),
     TypeOrmModule.forRoot(sqliteConnectionOptions),
-    TextModule,
   ],
   controllers: [AppController],
   providers: [],
