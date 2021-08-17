@@ -1,4 +1,9 @@
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import {
+  Column,
+  CreateDateColumn,
+  Entity,
+  PrimaryGeneratedColumn,
+} from 'typeorm';
 
 @Entity()
 export class Text {
@@ -6,6 +11,8 @@ export class Text {
   id: string;
   @Column()
   text: string;
-  @Column()
+  @Column({ default: () => Date.now() + 60 * 60 * 1000 })
   expires: number;
+  @CreateDateColumn()
+  created_at: Date;
 }

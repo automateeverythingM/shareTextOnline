@@ -1,3 +1,4 @@
 {
-  "cSpell.words": ["sharetextonline"]
+  "cSpell.words": ["sharetextonline"],
+  "vsicons.presets.nestjs": true
 }
