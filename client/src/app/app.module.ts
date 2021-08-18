@@ -23,9 +23,7 @@ import { notifyConfig } from 'src/configs/notifConfig';
     BypassStyleSanitizePipe,
   ],
   imports: [
-    BrowserModule.withServerTransition({
-      appId: 'share-text-online-paste-it-share-it',
-    }),
+    BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     NotifierModule.withConfig(notifyConfig),
