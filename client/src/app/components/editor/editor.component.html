@@ -1,0 +1,10 @@
+<div class="pt-10 h-full">
+  <div
+    [contentEditable]="true"
+    class="w-full p-2 border-2 text-black h-3/4 overflow-auto"
+    #editor
+  ></div>
+  <button (click)="onClick(editor)" class="btn btn-dark w-full mx-0 text-2xl">
+    Share
+  </button>
+</div>

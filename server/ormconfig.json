@@ -1,0 +1,12 @@
+{
+  "type": "sqlite",
+  "database": "db/sharetextonline",
+  "entities": ["dist/**/*.entity{.ts,.js}"],
+  "autoLoadEntities": true,
+  "synchronize": false,
+  "logging": true,
+  "migrations": ["dist/**/*.migrations.js"],
+  "cli": {
+    "migrationsDir": "src/migrations"
+  }
+}

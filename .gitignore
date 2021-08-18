@@ -19,6 +19,7 @@ Thumbs.db
 # Tests
 coverage
 .nyc_output
+.env
 
 # IDEs and editors
 /.idea
@@ -55,3 +56,4 @@ connect.lock
 libpeerconnection.log
 testem.log
 /typings
+server/db

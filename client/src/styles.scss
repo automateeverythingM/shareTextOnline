@@ -1,1 +1,42 @@
-/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import "~angular-notifier/styles.css";
+
+$dark: #232323;
+$lightDark: #464646;
+$white: #fff;
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1.2rem;
+  transition: all 0.15s ease-in-out;
+}
+
+@mixin btnColors($background, $border, $color) {
+  background: $background;
+  border: $border;
+  color: $color;
+  margin: 10px;
+}
+
+.btn-dark {
+  @include btnColors($dark, $lightDark, $white);
+  box-shadow: 2px 1px $lightDark;
+  &:hover {
+    background-color: lighten($dark, 20);
+  }
+}
