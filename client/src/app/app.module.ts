@@ -10,7 +10,8 @@ import { DisplayTextComponent } from './pages/display-text/display-text.componen
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { BypassStyleSanitizePipe } from './pipes/bypass-style-sanitize.pipe';
-
+import { NotifierModule } from 'angular-notifier';
+import { notifyConfig } from 'src/configs/notifConfig';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +22,14 @@ import { BypassStyleSanitizePipe } from './pipes/bypass-style-sanitize.pipe';
     NotFoundComponent,
     BypassStyleSanitizePipe,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [
+    BrowserModule.withServerTransition({
+      appId: 'share-text-online-paste-it-share-it',
+    }),
+    AppRoutingModule,
+    HttpClientModule,
+    NotifierModule.withConfig(notifyConfig),
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
