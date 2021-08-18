@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  domain: 'test',
+  domain: 'https://share-text-online.netlify.app/',
 };
