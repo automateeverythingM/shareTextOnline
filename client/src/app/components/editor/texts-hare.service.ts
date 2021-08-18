@@ -9,6 +9,16 @@ import { Injectable } from '@angular/core';
 export class TextShareService {
   constructor(private http: HttpClient) {}
 
+  postTextShare(text: string) {
+    return this.http.post(
+      process.env.domain + '/shared',
+      JSON.stringify({ text: text }),
+      {
+        headers: { 'Content-Type': 'application/json' },
+      }
+    );
+  }
+
   getTextById(id: string) {
     return this.http.get(process.env.domain + '/shared/' + id);
   }
