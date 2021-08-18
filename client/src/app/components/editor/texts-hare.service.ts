@@ -11,7 +11,7 @@ export class TextShareService {
 
   postTextShare(text: string) {
     return this.http.post(
-      process.env.domain + '/shared',
+      window.location.hostname + '/shared',
       JSON.stringify({ text: text }),
       {
         headers: { 'Content-Type': 'application/json' },
@@ -20,6 +20,6 @@ export class TextShareService {
   }
 
   getTextById(id: string) {
-    return this.http.get(process.env.domain + '/shared/' + id);
+    return this.http.get(window.location.host + '/shared/' + id);
   }
 }

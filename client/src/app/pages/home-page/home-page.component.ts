@@ -17,7 +17,7 @@ export class HomePageComponent implements OnInit {
 
   sendText(text: string): void {
     this.textService.postTextShare(text).subscribe((response: any) => {
-      copy(process.env.domain + response.id);
+      copy(window.location.host + response.id);
       this.notifier.notify('success', 'Link copied to clipboard!');
     }, console.error);
   }
