@@ -11,12 +11,12 @@ export class TextShareService {
   constructor(private http: HttpClient) {}
 
   postTextShare(text: string) {
-    return this.http.post('/shared', JSON.stringify({ text: text }), {
+    return this.http.post('shared', JSON.stringify({ text: text }), {
       headers: { 'Content-Type': 'application/json' },
     });
   }
 
   getTextById(id: string) {
-    return this.http.get('/shared/' + id);
+    return this.http.get('shared/' + id);
   }
 }
